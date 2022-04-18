@@ -1,0 +1,23 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: fraud
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/fraud
+    username: newuser
+    password: password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format-sql: true
+feign:
+  autoconfiguration:
+    jackson:
+      enabled: true
